@@ -25,20 +25,20 @@ const HeaderVitrine = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 h-20 bg-card/95 backdrop-blur-md shadow-water">
-      <div className="container mx-auto px-4 h-full">
+    <header className="fixed top-0 left-0 right-0 z-50 h-16 sm:h-20 bg-card/95 backdrop-blur-md shadow-water">
+      <div className="container mx-auto px-4 sm:px-6 h-full">
         <div className="flex items-center justify-between h-full">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
               src="/logo.png"
               alt="PH e Pronto - Tudo para Piscinas"
-              className="h-14 w-auto"
+              className="h-10 sm:h-12 md:h-14 w-auto"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navLinks.map((link) => (
               link.isRoute ? (
                 <Link
@@ -64,7 +64,7 @@ const HeaderVitrine = () => {
               href="https://wa.me/5585994319021"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-accent text-accent-foreground px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-200 hover:bg-accent/90 hover:scale-105"
+              className="bg-accent text-accent-foreground px-5 xl:px-6 py-2 xl:py-2.5 rounded-full font-semibold text-sm transition-all duration-200 hover:bg-accent/90 hover:scale-105"
             >
               Fale conosco
             </a>
@@ -73,7 +73,7 @@ const HeaderVitrine = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-foreground"
+            className="lg:hidden p-2 text-foreground"
             aria-label="Menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -82,15 +82,15 @@ const HeaderVitrine = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden py-4 bg-card/95 backdrop-blur-md rounded-lg mt-2 shadow-water absolute left-4 right-4">
-            <div className="flex flex-col gap-2">
+          <nav className="lg:hidden py-4 bg-card/95 backdrop-blur-md rounded-lg mt-2 shadow-water absolute left-4 right-4 sm:left-6 sm:right-6">
+            <div className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 link.isRoute ? (
                   <Link
                     key={link.href}
                     to={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`px-4 py-3 hover:bg-muted rounded-lg transition-colors ${
+                    className={`px-4 py-3 hover:bg-muted rounded-lg transition-colors text-sm sm:text-base ${
                       location.pathname === link.href ? 'text-primary bg-muted' : 'text-foreground'
                     }`}
                   >
@@ -101,7 +101,7 @@ const HeaderVitrine = () => {
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="px-4 py-3 text-foreground hover:bg-muted rounded-lg transition-colors"
+                    className="px-4 py-3 text-foreground hover:bg-muted rounded-lg transition-colors text-sm sm:text-base"
                   >
                     {link.label}
                   </a>
@@ -111,7 +111,7 @@ const HeaderVitrine = () => {
                 href="https://wa.me/5585994319021"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mx-4 mt-2 bg-accent text-accent-foreground px-6 py-3 rounded-full font-semibold text-center transition-all duration-200 hover:bg-accent/90"
+                className="mx-4 mt-2 bg-accent text-accent-foreground px-6 py-3 rounded-full font-semibold text-center transition-all duration-200 hover:bg-accent/90 text-sm sm:text-base"
               >
                 Fale conosco
               </a>
@@ -128,8 +128,9 @@ const Vitrine = () => {
 
   useEffect(() => {
     const calculateHeight = () => {
-      // 80px header + 63px badge = 143px
-      const height = window.innerHeight - 80 - 63;
+      // Mobile: 64px header, Desktop: 80px header + 63px badge
+      const headerHeight = window.innerWidth < 640 ? 64 : 80;
+      const height = window.innerHeight - headerHeight - 63;
       setIframeHeight(height);
     };
 
@@ -150,7 +151,7 @@ const Vitrine = () => {
       <HeaderVitrine />
       
       {/* Main content - iframe */}
-      <main className="pt-20 w-full" style={{ height: `calc(100vh - 63px)` }}>
+      <main className="pt-16 sm:pt-20 w-full" style={{ height: `calc(100vh - 63px)` }}>
         <iframe
           src="https://phepronto.egestor.com.br/vitrine/"
           style={{
