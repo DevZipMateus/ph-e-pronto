@@ -9,11 +9,13 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Logo e descrição */}
           <div className="lg:col-span-2">
-            <img
-              src="/logo.png"
-              alt="PH e Pronto"
-              className="h-16 w-auto mb-4"
-            />
+            <div className="bg-white rounded-xl p-3 inline-block mb-4">
+              <img
+                src="/logo.png"
+                alt="PH e Pronto"
+                className="h-14 w-auto"
+              />
+            </div>
             <p className="text-background/70 max-w-md mb-6">
               Sua parceira em soluções ágeis para tratamento de águas e piscinas. 
               Produtos de alta performance para uma piscina cristalina sem esforço.
