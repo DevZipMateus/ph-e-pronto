@@ -5,10 +5,10 @@ const InstagramSection = () => {
   const instagramUrl = "https://www.instagram.com/phepronto/";
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-pink-50 via-purple-50 to-orange-50">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-water-light/30 via-primary/5 to-secondary/10">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-8 sm:mb-12">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 via-purple-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Instagram className="w-4 h-4" />
             <span>@phepronto</span>
           </div>
@@ -27,7 +27,7 @@ const InstagramSection = () => {
             href={instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative aspect-square bg-gradient-to-br from-water-light to-water rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            className="group relative aspect-square bg-gradient-to-br from-primary to-water rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
             <div className="absolute inset-0 flex flex-col items-center justify-center p-3 sm:p-4 text-white">
               <span className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-1">💧</span>
@@ -40,7 +40,7 @@ const InstagramSection = () => {
             href={instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative aspect-square bg-gradient-to-br from-primary to-primary/80 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            className="group relative aspect-square bg-gradient-to-br from-water to-water-dark rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
             <div className="absolute inset-0 flex flex-col items-center justify-center p-3 sm:p-4 text-white">
               <span className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-1">🧪</span>
@@ -53,7 +53,7 @@ const InstagramSection = () => {
             href={instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative aspect-square bg-gradient-to-br from-secondary to-secondary/80 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            className="group relative aspect-square bg-gradient-to-br from-secondary to-secondary/70 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
             <div className="absolute inset-0 flex flex-col items-center justify-center p-3 sm:p-4 text-secondary-foreground">
               <span className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-1">✨</span>
@@ -66,7 +66,7 @@ const InstagramSection = () => {
             href={instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative aspect-square bg-gradient-to-br from-pink-500 via-purple-500 to-orange-500 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            className="group relative aspect-square bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
             <div className="absolute inset-0 flex flex-col items-center justify-center p-3 sm:p-4 text-white">
               <Instagram className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mb-1 sm:mb-2" />
@@ -80,7 +80,7 @@ const InstagramSection = () => {
           <Button
             asChild
             size="lg"
-            className="bg-gradient-to-r from-pink-500 via-purple-500 to-orange-500 hover:from-pink-600 hover:via-purple-600 hover:to-orange-600 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base px-6 sm:px-8"
+            className="bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737] hover:from-[#6B2F94] hover:via-[#D91818] hover:to-[#D4652F] text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base px-6 sm:px-8"
           >
             <a 
               href={instagramUrl}
