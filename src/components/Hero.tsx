@@ -1,13 +1,23 @@
 import { Droplets, ArrowRight } from 'lucide-react';
+import heroPoolImage from '@/assets/hero-pool.jpg';
 
 const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-gradient pt-20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
     >
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroPoolImage})` }}
+      >
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/90"></div>
+      </div>
+
       {/* Decorative waves background */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <svg
           className="absolute bottom-0 left-0 w-full h-auto animate-wave"
           viewBox="0 0 1440 320"
@@ -33,13 +43,13 @@ const Hero = () => {
       </div>
 
       {/* Floating water drops decoration */}
-      <div className="absolute top-32 left-10 animate-float opacity-20">
+      <div className="absolute top-32 left-10 animate-float opacity-30">
         <Droplets className="w-20 h-20 text-secondary" />
       </div>
-      <div className="absolute top-48 right-20 animate-float opacity-20" style={{ animationDelay: '1s' }}>
+      <div className="absolute top-48 right-20 animate-float opacity-30" style={{ animationDelay: '1s' }}>
         <Droplets className="w-16 h-16 text-primary" />
       </div>
-      <div className="absolute bottom-48 left-1/4 animate-float opacity-20" style={{ animationDelay: '2s' }}>
+      <div className="absolute bottom-48 left-1/4 animate-float opacity-30" style={{ animationDelay: '2s' }}>
         <Droplets className="w-12 h-12 text-secondary" />
       </div>
 
@@ -47,7 +57,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo badge */}
-          <div className="inline-flex items-center gap-2 bg-card/80 backdrop-blur-sm px-4 py-2 rounded-full mb-8 shadow-water animate-fade-in">
+          <div className="inline-flex items-center gap-2 bg-card/90 backdrop-blur-sm px-4 py-2 rounded-full mb-8 shadow-water animate-fade-in">
             <Droplets className="w-5 h-5 text-secondary" />
             <span className="text-sm font-medium text-muted-foreground">
               Tudo para piscinas!
@@ -60,7 +70,7 @@ const Hero = () => {
           </h1>
 
           {/* H2 - Descrição */}
-          <h2 className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <h2 className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Sua parceira em soluções ágeis para tratamento de águas e piscinas. Produtos de alta performance para uma piscina cristalina sem esforço.
           </h2>
 
@@ -77,7 +87,7 @@ const Hero = () => {
             </a>
             <a
               href="#produtos"
-              className="bg-primary/10 text-primary border-2 border-primary/30 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:border-primary"
+              className="bg-card/90 backdrop-blur-sm text-primary border-2 border-primary/30 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:border-primary"
             >
               Ver produtos
             </a>
@@ -85,15 +95,15 @@ const Hero = () => {
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            <div className="text-center">
+            <div className="text-center bg-card/80 backdrop-blur-sm rounded-2xl p-4">
               <div className="text-3xl md:text-4xl font-bold text-primary">100+</div>
               <div className="text-sm text-muted-foreground mt-1">Produtos</div>
             </div>
-            <div className="text-center">
+            <div className="text-center bg-card/80 backdrop-blur-sm rounded-2xl p-4">
               <div className="text-3xl md:text-4xl font-bold text-secondary">24h</div>
               <div className="text-sm text-muted-foreground mt-1">Entrega rápida</div>
             </div>
-            <div className="text-center">
+            <div className="text-center bg-card/80 backdrop-blur-sm rounded-2xl p-4">
               <div className="text-3xl md:text-4xl font-bold text-accent">5★</div>
               <div className="text-sm text-muted-foreground mt-1">Avaliação</div>
             </div>
