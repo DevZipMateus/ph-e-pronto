@@ -29,7 +29,7 @@ const InstagramSection = () => {
             rel="noopener noreferrer"
             className="group relative aspect-square bg-gradient-to-br from-primary to-water rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-3 sm:p-4 text-white">
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-3 sm:p-4 text-foreground">
               <span className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-1">💧</span>
               <span className="text-xs sm:text-sm font-medium text-center">Dicas de Tratamento</span>
             </div>
@@ -42,7 +42,7 @@ const InstagramSection = () => {
             rel="noopener noreferrer"
             className="group relative aspect-square bg-gradient-to-br from-water to-water-dark rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-3 sm:p-4 text-white">
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-3 sm:p-4 text-foreground">
               <span className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-1">🧪</span>
               <span className="text-xs sm:text-sm font-medium text-center">Produtos em Destaque</span>
             </div>
@@ -55,7 +55,7 @@ const InstagramSection = () => {
             rel="noopener noreferrer"
             className="group relative aspect-square bg-gradient-to-br from-secondary to-secondary/70 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-3 sm:p-4 text-secondary-foreground">
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-3 sm:p-4 text-foreground">
               <span className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-1">✨</span>
               <span className="text-xs sm:text-sm font-medium text-center">Novidades</span>
             </div>
@@ -68,7 +68,7 @@ const InstagramSection = () => {
             rel="noopener noreferrer"
             className="group relative aspect-square bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-3 sm:p-4 text-white">
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-3 sm:p-4 text-foreground">
               <Instagram className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mb-1 sm:mb-2" />
               <span className="text-xs sm:text-sm font-medium text-center">Ver Mais</span>
             </div>
