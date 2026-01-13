@@ -9,11 +9,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Logo e descrição */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-xl p-3 inline-block mb-4">
+            <div className="bg-white rounded-xl p-4 inline-block mb-4">
               <img
                 src="/logo.png"
                 alt="PH e Pronto"
-                className="h-14 w-auto"
+                className="h-20 w-auto"
               />
             </div>
             <p className="text-background/70 max-w-md mb-6">
