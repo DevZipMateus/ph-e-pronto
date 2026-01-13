@@ -1,4 +1,5 @@
-import { Droplets, ArrowRight } from 'lucide-react';
+import { Droplets, ArrowRight, ShoppingBag } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import heroPoolImage from '@/assets/hero-pool.jpg';
 
 const Hero = () => {
@@ -85,11 +86,18 @@ const Hero = () => {
               Solicitar orçamento
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </a>
+            <Link
+              to="/vitrine"
+              className="group w-full sm:w-auto bg-primary text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 hover:bg-primary/90 hover:scale-105 shadow-water flex items-center justify-center gap-2"
+            >
+              <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5" />
+              Ver vitrine
+            </Link>
             <a
               href="#produtos"
               className="w-full sm:w-auto bg-card/90 backdrop-blur-sm text-primary border-2 border-primary/30 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:border-primary text-center"
             >
-              Ver produtos
+              Saiba mais
             </a>
           </div>
 
