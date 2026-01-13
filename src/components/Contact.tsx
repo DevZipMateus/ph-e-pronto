@@ -1,4 +1,5 @@
-import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Mail, MapPin } from 'lucide-react';
+import whatsappIcon from '@/assets/whatsapp-icon.png';
 
 const Contact = () => {
   return (
@@ -26,8 +27,8 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="group bg-card p-4 sm:p-6 lg:p-8 rounded-xl sm:rounded-2xl shadow-water hover:shadow-water-hover transition-all duration-300 hover:-translate-y-1 text-center"
             >
-              <div className="w-12 h-12 sm:w-14 md:w-16 sm:h-14 md:h-16 bg-[#25D366]/10 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
-                <Phone className="w-6 h-6 sm:w-7 md:w-8 sm:h-7 md:h-8 text-[#25D366]" />
+              <div className="w-12 h-12 sm:w-14 md:w-16 sm:h-14 md:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                <img src={whatsappIcon} alt="WhatsApp" className="w-10 h-10 sm:w-12 md:w-14 sm:h-12 md:h-14" />
               </div>
               <h3 className="text-base sm:text-lg lg:text-xl font-bold text-foreground mb-1 sm:mb-2">WhatsApp</h3>
               <p className="text-xs sm:text-sm text-muted-foreground hidden sm:block">(85) 99431-9021</p>

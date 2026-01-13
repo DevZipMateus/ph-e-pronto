@@ -1,5 +1,6 @@
-import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Mail, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import whatsappIcon from '@/assets/whatsapp-icon.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -35,10 +36,10 @@ const Footer = () => {
                 href="https://wa.me/5585994319021"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 sm:w-10 sm:h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-background/20 transition-colors"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center overflow-hidden"
                 aria-label="WhatsApp"
               >
-                <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
+                <img src={whatsappIcon} alt="WhatsApp" className="w-full h-full object-contain" />
               </a>
               <a
                 href="mailto:adm@phpronto.com.br"
@@ -105,7 +106,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm sm:text-base text-background/70 hover:text-background transition-colors"
                 >
-                  <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <img src={whatsappIcon} alt="WhatsApp" className="w-4 h-4 sm:w-5 sm:h-5" />
                   (85) 99431-9021
                 </a>
               </li>
