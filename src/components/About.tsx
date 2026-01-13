@@ -1,4 +1,6 @@
 import { History, Target, Eye, Heart, Zap, CheckCircle, Sparkles } from 'lucide-react';
+import poolTestingImage from '@/assets/pool-testing.jpg';
+import crystalWaterImage from '@/assets/crystal-water.jpg';
 
 const About = () => {
   const values = [
@@ -59,11 +61,11 @@ const About = () => {
           <div className="order-1 lg:order-2">
             <div className="relative">
               <div className="absolute inset-0 bg-wave-gradient rounded-3xl rotate-3 opacity-20"></div>
-              <div className="relative bg-gradient-to-br from-secondary/20 to-primary/20 rounded-3xl p-8 shadow-water">
+              <div className="relative rounded-3xl overflow-hidden shadow-water">
                 <img
-                  src="/logo.png"
-                  alt="PH e Pronto"
-                  className="w-full max-w-xs mx-auto"
+                  src={poolTestingImage}
+                  alt="Teste de pH da água da piscina"
+                  className="w-full h-80 object-cover"
                 />
               </div>
             </div>
@@ -97,27 +99,43 @@ const About = () => {
           </div>
         </div>
 
-        {/* Values */}
-        <div>
-          <div className="flex items-center justify-center gap-3 mb-8">
-            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-              <Heart className="w-6 h-6 text-primary" />
+        {/* Values with image */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="relative rounded-3xl overflow-hidden shadow-water">
+            <img
+              src={crystalWaterImage}
+              alt="Água cristalina de piscina"
+              className="w-full h-80 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+            <div className="absolute bottom-6 left-6 right-6">
+              <p className="text-primary-foreground text-lg font-semibold">
+                Água cristalina é nosso compromisso
+              </p>
             </div>
-            <h3 className="text-2xl font-bold text-foreground">Nossos valores</h3>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => (
-              <div
-                key={index}
-                className="bg-card p-6 rounded-xl shadow-water hover:shadow-water-hover transition-all duration-300 hover:-translate-y-1 text-center"
-              >
-                <div className="w-14 h-14 bg-wave-gradient rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="w-7 h-7 text-secondary-foreground" />
-                </div>
-                <h4 className="font-semibold text-foreground mb-2">{value.title}</h4>
-                <p className="text-sm text-muted-foreground">{value.description}</p>
+          
+          <div>
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                <Heart className="w-6 h-6 text-primary" />
               </div>
-            ))}
+              <h3 className="text-2xl font-bold text-foreground">Nossos valores</h3>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {values.map((value, index) => (
+                <div
+                  key={index}
+                  className="bg-card p-5 rounded-xl shadow-water hover:shadow-water-hover transition-all duration-300 hover:-translate-y-1"
+                >
+                  <div className="w-12 h-12 bg-wave-gradient rounded-xl flex items-center justify-center mb-3">
+                    <value.icon className="w-6 h-6 text-secondary-foreground" />
+                  </div>
+                  <h4 className="font-semibold text-foreground mb-1">{value.title}</h4>
+                  <p className="text-sm text-muted-foreground">{value.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
