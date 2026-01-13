@@ -12,7 +12,7 @@ const Footer = () => {
             <img
               src="/logo.png"
               alt="PH e Pronto"
-              className="h-16 w-auto mb-4 brightness-0 invert"
+              className="h-16 w-auto mb-4"
             />
             <p className="text-background/70 max-w-md mb-6">
               Sua parceira em soluções ágeis para tratamento de águas e piscinas. 
