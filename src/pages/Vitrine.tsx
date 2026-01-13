@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-const Header = () => {
+const HeaderVitrine = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,24 +16,18 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { href: '#inicio', label: 'Início', isRoute: false },
-    { href: '#sobre', label: 'Sobre', isRoute: false },
-    { href: '#produtos', label: 'Produtos', isRoute: false },
+    { href: '/', label: 'Início', isRoute: true },
+    { href: '/#sobre', label: 'Sobre', isRoute: false },
+    { href: '/#produtos', label: 'Produtos', isRoute: false },
     { href: '/vitrine', label: 'Vitrine', isRoute: true },
-    { href: '#localizacao', label: 'Localização', isRoute: false },
-    { href: '#contato', label: 'Contato', isRoute: false },
+    { href: '/#localizacao', label: 'Localização', isRoute: false },
+    { href: '/#contato', label: 'Contato', isRoute: false },
   ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-card/95 backdrop-blur-md shadow-water'
-          : 'bg-transparent'
-      }`}
-    >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+    <header className="fixed top-0 left-0 right-0 z-50 h-20 bg-card/95 backdrop-blur-md shadow-water">
+      <div className="container mx-auto px-4 h-full">
+        <div className="flex items-center justify-between h-full">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
@@ -49,7 +44,9 @@ const Header = () => {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="text-sm font-medium transition-colors duration-200 hover:text-primary text-foreground"
+                  className={`text-sm font-medium transition-colors duration-200 hover:text-primary ${
+                    location.pathname === link.href ? 'text-primary' : 'text-foreground'
+                  }`}
                 >
                   {link.label}
                 </Link>
@@ -85,7 +82,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden py-4 bg-card/95 backdrop-blur-md rounded-lg mt-2 shadow-water">
+          <nav className="md:hidden py-4 bg-card/95 backdrop-blur-md rounded-lg mt-2 shadow-water absolute left-4 right-4">
             <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
                 link.isRoute ? (
@@ -93,7 +90,9 @@ const Header = () => {
                     key={link.href}
                     to={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="px-4 py-3 text-foreground hover:bg-muted rounded-lg transition-colors"
+                    className={`px-4 py-3 hover:bg-muted rounded-lg transition-colors ${
+                      location.pathname === link.href ? 'text-primary bg-muted' : 'text-foreground'
+                    }`}
                   >
                     {link.label}
                   </Link>
@@ -124,4 +123,46 @@ const Header = () => {
   );
 };
 
-export default Header;
+const Vitrine = () => {
+  const [iframeHeight, setIframeHeight] = useState(0);
+
+  useEffect(() => {
+    const calculateHeight = () => {
+      // 80px header + 63px badge = 143px
+      const height = window.innerHeight - 80 - 63;
+      setIframeHeight(height);
+    };
+
+    calculateHeight();
+    window.addEventListener('resize', calculateHeight);
+    
+    // Prevent scroll on body
+    document.body.style.overflow = 'hidden';
+    
+    return () => {
+      window.removeEventListener('resize', calculateHeight);
+      document.body.style.overflow = '';
+    };
+  }, []);
+
+  return (
+    <div className="h-screen w-full overflow-hidden">
+      <HeaderVitrine />
+      
+      {/* Main content - iframe */}
+      <main className="pt-20 w-full" style={{ height: `calc(100vh - 63px)` }}>
+        <iframe
+          src="https://phepronto.egestor.com.br/vitrine/"
+          style={{
+            width: '100%',
+            height: `${iframeHeight}px`,
+            border: 'none',
+          }}
+          title="Demonstração de Vitrine"
+        />
+      </main>
+    </div>
+  );
+};
+
+export default Vitrine;
