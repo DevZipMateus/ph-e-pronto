@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="bg-white rounded-xl p-3 sm:p-4 inline-block mb-4">
               <img
                 src="/logo.png"
-                alt="PH e Pronto"
+                alt="PH & Pronto"
                 className="h-16 sm:h-20 w-auto"
               />
             </div>
@@ -127,7 +127,7 @@ const Footer = () => {
         <div className="border-t border-background/10 pt-6 sm:pt-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
             <p className="text-background/50 text-xs sm:text-sm text-center sm:text-left">
-              © {currentYear} PH e Pronto. Todos os direitos reservados.
+              © {currentYear} PH & Pronto. Todos os direitos reservados.
             </p>
             <p className="text-background/50 text-xs sm:text-sm">
               CNPJ: 37.102.427/0001-00

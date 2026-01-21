@@ -1,4 +1,4 @@
-import { Package, Droplet, Filter, Brush, Beaker, ShieldCheck } from 'lucide-react';
+import { Package, Droplet, Brush, Beaker } from 'lucide-react';
 import poolProductsImage from '@/assets/pool-products.jpg';
 import poolCleaningImage from '@/assets/pool-cleaning.jpg';
 const Products = () => {
@@ -18,20 +18,10 @@ const Products = () => {
     description: 'Rodos, escovas e aspiradores para manter sua piscina sempre limpa.',
     items: ['Rodos para piscina', 'Escovas', 'Aspiradores', 'Peneiras']
   }, {
-    icon: Filter,
-    title: 'Filtros e bombas',
-    description: 'Equipamentos para filtragem e circulação da água.',
-    items: ['Filtros de areia', 'Bombas', 'Motores', 'Peças de reposição']
-  }, {
     icon: Droplet,
     title: 'Tratamento especial',
     description: 'Produtos para recuperação e equilíbrio químico de piscinas problemáticas.',
     items: ['Decantador', 'Floculante', 'Oxidante', 'Sulfato de alumínio']
-  }, {
-    icon: ShieldCheck,
-    title: 'Estrutura e segurança',
-    description: 'Degraus, escadas e itens estruturais para sua piscina.',
-    items: ['Degraus', 'Escadas', 'Corrimãos', 'Ralos']
   }];
   return <section id="produtos" className="py-16 sm:py-20 lg:py-24 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6">

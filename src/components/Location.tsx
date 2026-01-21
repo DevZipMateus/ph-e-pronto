@@ -41,7 +41,8 @@ const Location = () => {
               <div>
                 <h3 className="font-semibold text-sm sm:text-base text-foreground mb-1">Horário de funcionamento</h3>
                 <p className="text-xs sm:text-sm text-muted-foreground">
-                  Segunda a sexta: 7h às 17h
+                  Segunda a sexta: 08h às 17h<br />
+                  Sábados: 08h às 12h
                 </p>
               </div>
             </div>
@@ -89,7 +90,7 @@ const Location = () => {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Localização PH e Pronto"
+              title="Localização PH & Pronto"
             ></iframe>
           </div>
         </div>
