@@ -17,7 +17,7 @@ const VitrineSection = () => {
     {
       icon: Truck,
       title: 'Entrega rápida',
-      description: 'Receba em Maracanaú e região',
+      description: 'Receba em Fortaleza e Região Metropolitana',
     },
     {
       icon: Star,

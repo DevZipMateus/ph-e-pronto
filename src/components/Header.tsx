@@ -37,7 +37,7 @@ const Header = () => {
           <Link to="/" className="flex items-center">
             <img
               src="/logo.png"
-              alt="PH e Pronto - Tudo para Piscinas"
+              alt="PH & Pronto - Tudo para Piscinas"
               className="h-10 sm:h-12 md:h-14 w-auto"
             />
           </Link>

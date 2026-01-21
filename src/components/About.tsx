@@ -35,7 +35,7 @@ const About = () => {
             Sobre nós
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
-            Conheça a PH e Pronto
+            Conheça a PH & Pronto
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto px-2">
             Desde 2025, transformando a manutenção de piscinas em uma tarefa simples e prazerosa.
@@ -55,7 +55,7 @@ const About = () => {
               Nossa história começou nos últimos meses de 2025, motivada pela vontade de entregar mais do que apenas produtos: queríamos entregar soluções.
             </p>
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-              A PH e Pronto foi criada para ser a parceira ideal no tratamento de águas e piscinas, com o objetivo central de garantir qualidade máxima e segurança. Entendemos que piscina é sinônimo de alegria, por isso trabalhamos para facilitar o tratamento da água, oferecendo tudo o que é necessário para que você tenha uma piscina cristalina sem esforço.
+              A PH & Pronto foi criada para ser a parceira ideal no tratamento de águas e piscinas, com o objetivo central de garantir qualidade máxima e segurança. Entendemos que piscina é sinônimo de alegria, por isso trabalhamos para facilitar o tratamento da água, oferecendo tudo o que é necessário para que você tenha uma piscina cristalina sem esforço.
             </p>
           </div>
           <div className="order-1 lg:order-2">

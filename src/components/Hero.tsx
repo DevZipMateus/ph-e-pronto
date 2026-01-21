@@ -67,7 +67,7 @@ const Hero = () => {
 
           {/* H1 - Nome da empresa */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 sm:mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <span className="text-gradient">PH e Pronto</span>
+            <span className="text-gradient">PH & Pronto</span>
           </h1>
 
           {/* H2 - Descrição */}
@@ -108,8 +108,8 @@ const Hero = () => {
               <div className="text-xs sm:text-sm text-muted-foreground mt-1">Produtos</div>
             </div>
             <div className="text-center bg-card/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary">24h</div>
-              <div className="text-xs sm:text-sm text-muted-foreground mt-1">Entrega rápida</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary">🚚</div>
+              <div className="text-xs sm:text-sm text-muted-foreground mt-1">Fortaleza e Região</div>
             </div>
             <div className="text-center bg-card/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4">
               <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent">5★</div>
